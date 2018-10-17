@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natsuki Ueno</title>
-    <link href="css/design.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style media="screen">
       .pub li {
-        margin: 10px 0px;
+        margin: 20px;
+        /* font-size: 16px; */
+        line-height: 150%;
       }
       dt {
         margin-top: 10px;
@@ -16,11 +18,11 @@
         margin-bottom: 10px;
       }
       .author {
-        font-weight: bold;
+        font-weight: 600;
         text-decoration: underline;
       }
       .title {
-        font-weight: bold;
+        font-weight: 600;
       }
       .award {
         color: blue;
@@ -28,122 +30,161 @@
     </style>
   </head>
   <body>
-    <h1>Natsuki Ueno [植野 夏樹]</h1>
-    <p>
-      Member of <a href="http://www.sp.ipc.i.u-tokyo.ac.jp/en/" target="_blank">Saruwatari Lab., The University of Tokyo</a> <br>
-      Master's student in <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate school of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
-      Email: natsuki_ueno [(at)] ipc.i.u-tokyo.ac.jp
-    </p>
+    <!--JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--　jumbotron　 -->
+    <div class="jumbotron bg-light">
+      <div class="container">
+        <h1>Natsuki Ueno / 植野 夏樹</h1>
+        <p>
+          Member of <a href="http://www.sp.ipc.i.u-tokyo.ac.jp/en/" target="_blank">Saruwatari Lab., The University of Tokyo</a> <br>
+          PhD student in <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate school of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
+          Email: natsuki_ueno [(at)] ipc.i.u-tokyo.ac.jp
+        </p>
+      </div>
+    </div>
 
-    <hr>
+    <div class="container bg-light" style="padding-bottom: 15px;">
+      <hr>
+      <h2 class="text-center">Publications</h2>
+      <hr>
+      <div class="container">
+        <h3>Letters</h3>
+        <ol class="pub">
+          <li>
+            <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
+            <span class="title">"Sound field recording using distributed microphones based on harmonic analysis of infinite order,"</span><br>
+            IEEE Signal Processing Letters, vol. 25, no. 1, pp. 135-139, January 2018.<br>
+            [<a href="https://ieeexplore.ieee.org/document/8116652" target="_blank">link</a>]
+            [<a href="https://codeocean.com/2017/11/17/sound-field-recording-based-on-harmonic-analysis-of-infinite-order/metadata" target="_blank">code</a>]
+          </li>
+        </ol>
+      </div>
+      <div class="container">
+        <h3>International Conference Papers</h3>
+        <ol class="pub">
+          <li>
+            <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
+            <span class="title">"Kernel ridge regression with constraint of Helmholtz equation for sound field interpolation,"</span><br>
+            in Proceedings of International Workshop on Acoustic Signal Enhancement (IWAENC), pp. 436-440, Tokyo, September 2018.
+          </li>
+          <li>
+            Yuhta Takida, Shoichi Koyama, <span class="author">Natsuki Ueno</span> and Hiroshi Saruwatari,<br>
+            <span class="title">"Gridless sound field decomposition based on reciprocity gap functional in spherical harmonic domain,"</span><br>
+            in Proceedings of IEEE Sensor Array and Multichannel Signal Processing Workshop (SAM), pp. 627-631, Sheffield, July 2018.<br>
+            <span class="award">Best Student Paper Award</span>,
+            <span class="award">ONRG sponsored student travel grants</span>.<br>
+            [<a href="https://ieeexplore.ieee.org/document/8448736" target="_blank">link</a>]
+          </li>
+          <li>
+            <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
+            <span class="title">"Sound field reproduction with exterior cancellation using analytical weighting of harmonic coefficients,"</span><br>
+            in Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 466-470, Calgary, April 2018.<br>
+            [<a href="https://ieeexplore.ieee.org/document/8462084" target="_blank">link</a>]
+          </li>
+          <li>
+            <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
+            <span class="title">"Listening-area-informed sound field reproduction based on circular harmonic expansion,"</span><br>
+            in Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 111-115, New Orleans, March 2017.<br>
+            [<a href="https://ieeexplore.ieee.org/document/7952128" target="_blank">link</a>]
+          </li>
+          <li>
+            <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
+            <span class="title">"Listening-area-informed sound field reproduction with Gaussian prior based on circular harmonic expansion,"</span><br>
+            in Proceedings of Joint Workshop on Hands-free Speech Communications and Microphone Arrays (HSCMA), pp. 196-200, San Francisco, March 2017.<br>
+            [<a href="https://ieeexplore.ieee.org/document/7895589" target="_blank">link</a>]
+          </li>
+        </ol>
+      </div>
 
-    <h2>Publications</h2>
+      <div class="container">
+        <h3>Domestic Conference Papers</h3>
+        <ol class="pub">
+          <li>
+            <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋<br>
+            <span class="title">"微分で求める！積分を用いない高次アンビソニックス係数の導出,"</span><br>
+            日本音響学会 2018年秋季研究発表会講演論文集, 1-P-25, pp. 307–310, Oita, September 2018. (in Japanese)
+          </li>
+          <li>
+            瀧田雄太, 小山翔一, <span class="author">植野夏樹</span>, 猿渡洋<br>
+            <span class="title">"球面調和領域におけるreciprocity gap functional に基づくグリッドレス音場分解に関する実験的評価,"</span><br>
+            日本音響学会 2018年秋季研究発表会講演論文集, 1-P-38, pp. 341–344, Oita, September 2018. (in Japanese)
+          </li>
+          <li>
+            <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋<br>
+            <span class="title">"調和スペクトルの解析的重み付けに基づく音場再現と放射抑圧,"</span><br>
+            日本音響学会 2018年春季研究発表会講演論文集, 3-4-6, pp. 485–488, Saitama, March 2018. (in Japanese)
+          </li>
+          <li>
+            <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋<br>
+            <span class="title">"無限次元調和解析に基づく音場補間とそのカーネル回帰としての解釈,"</span><br>
+            日本音響学会 2017年秋季研究発表会講演論文集, 1-12-5, pp. 453–456, Ehime, September 2017. (in Japanese)
+          </li>
+          <li>
+            瀧田雄太, 小山翔一, <span class="author">植野夏樹</span>, 猿渡洋<br>
+            <span class="title">"複数球状マイクロフォンアレイを用いたグリッドレス音場分解の検討,"</span><br>
+            日本音響学会 2017年秋季研究発表会講演論文集, 1-12-3, pp. 447–450, Ehime, September 2017. (in Japanese)<br>
+            <span class="award">Student Presentation Award</span>.
+          </li>
+          <li>
+            <span class="author">植野夏樹</span>, 亀岡弘和,<br>
+            <span class="title">"空間勾配スペクトルのベイズモデリングによる複数音源の瞬時定位,"</span><br>
+            日本音響学会 2017年春季研究発表会講演論文集, 3-1-9, pp. 479–482, Kanagawa, March 2017. (in Japanese)
+          </li>
+          <li>
+            <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋,<br>
+            <span class="title">"受聴エリア事前情報を用いた音場再現 ―直線状アレイによる検証―,"</span><br>
+            日本音響学会 2016年秋季研究発表会講演論文集, 3-7-17, pp. 415–418, Toyama, September 2016.  (in Japanese)<br>
+            <span class="award">Student Presentation Award</span>.
+          </li>
+        </ol>
+      </div>
+      <div class="container">
+        <h3>Technical Reports</h3>
+        <ol class="pub">
+          <li>
+            瀧田雄太， 小山翔一, <span class="author">植野夏樹</span>, 猿渡洋<br>
+            <span class="title">"凸最適化による信号分離を用いたグリッドレス音場分解の性能向上,"</span><br>
+            電子情報通信学会技術報告, vol. 117, no. 399, EA2017-87, pp. 19-24, Osaka, January 2018. (in Japanese)
+          </li>
+          <li>
+            <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋,<br>
+            <span class="title">"受聴エリア事前情報を用いた音場再現 ～任意のスピーカ配置と指向特性における検証～,"</span><br>
+            電子情報通信学会技術報告, vol. 116, no. 420, EA2016-69, pp. 7-12, Kyoto, January 2017.  (in Japanese)<br>
+            <span class="award">Student Presentation Award</span>.
+          </li>
+          <li>
+            <span class="author">植野夏樹</span>, 延原章平, 松山隆司,<br>
+            <span class="title">"平行柱面屈折層を備えたRay-Pixelカメラのキャリブレーション,"</span><br>
+            情報処理学会研究報告 (CVIM), 2016-CVIM-202, no. 11, pp. 1–8, Osaka, May 2016. (in Japanese)<br>
+            <span class="award">Bachelor Thesis Session Award</span>.
+          </li>
+        </ol>
+      </div>
+    </div>
 
-    <h3>Letters</h3>
-    <ol class="pub">
-      <li>
-        <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
-        <span class="title">"Sound field recording using distributed microphones based on harmonic analysis of infinite order,"</span><br>
-        IEEE Signal Processing Letters, vol. 25, no. 1, pp. 135-139, January 2018.
-      </li>
-    </ol>
-
-    <h3>Peer-Reviewed International Conference Papers</h3>
-    <ol class="pub">
-      <li>
-        <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
-        <span class="title">"Kernel ridge regression with constraint of Helmholtz equation for sound field interpolation,"</span><br>
-        in Proceedings of International Workshop on Acoustic Signal Enhancement (IWAENC), Tokyo, September 2018. (to appear)
-      </li>
-      <li>
-        Yuhta Takida, Shoichi Koyama, <span class="author">Natsuki Ueno</span> and Hiroshi Saruwatari,<br>
-        <span class="title">"Gridless sound field decomposition based on reciprocity gap functional in spherical harmonic domain,"</span><br>
-        in Proceedings of IEEE Sensor Array and Multichannel Signal Processing Workshop (SAM), pp. 627-631, Sheffield, July 2018. <span class="award">[Best Student Paper Award, ONRG sponsored student travel grants]</span>
-      </li>
-      <li>
-        <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
-        <span class="title">"Sound field reproduction with exterior cancellation using analytical weighting of harmonic coefficients,"</span><br>
-        in Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 466-470, Calgary, April 2018.
-      </li>
-      <li>
-        <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
-        <span class="title">"Listening-area-informed sound field reproduction based on circular harmonic expansion,"</span><br>
-        in Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 111-115, New Orleans, March 2017.
-      </li>
-      <li>
-        <span class="author">Natsuki Ueno</span>, Shoichi Koyama, and Hiroshi Saruwatari,<br>
-        <span class="title">"Listening-area-informed sound field reproduction with Gaussian prior based on circular harmonic expansion,"</span><br>
-        in Proceedings of Joint Workshop on Hands-free Speech Communications and Microphone Arrays (HSCMA), pp. 196-200, San Francisco, March 2017.
-      </li>
-    </ol>
-
-    <h3>Domestic Conference Papers</h3>
-    <ol class="pub">
-      <li>
-        <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋<br>
-        <span class="title">"調和スペクトルの解析的重み付けに基づく音場再現と放射抑圧,"</span><br>
-        日本音響学会 2018年春季研究発表会講演論文集, 3-4-6, pp. 485–488, Saitama, March 2018. (in Japanese)
-      </li>
-      <li>
-        <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋<br>
-        <span class="title">"無限次元調和解析に基づく音場補間とそのカーネル回帰としての解釈,"</span><br>
-        日本音響学会 2017年秋季研究発表会講演論文集, 1-12-5, pp. 453–456, Ehime, September 2017. (in Japanese)
-      </li>
-      <li>
-        瀧田雄太， 小山翔一, <span class="author">植野夏樹</span>, 猿渡洋<br>
-        <span class="title">"複数球状マイクロフォンアレイを用いたグリッドレス音場分解の検討,"</span><br>
-        日本音響学会 2017年秋季研究発表会講演論文集, 1-12-3, pp. 447–450, Ehime, September 2017. (in Japanese) <span class="award">[Student Presentation Award]</span>
-      </li>
-      <li>
-        <span class="author">植野夏樹</span>, 亀岡弘和,<br>
-        <span class="title">"空間勾配スペクトルのベイズモデリングによる複数音源の瞬時定位,"</span><br>
-        日本音響学会 2017年春季研究発表会講演論文集, 3-1-9, pp. 479–482, Kanagawa, March 2017. (in Japanese)
-      </li>
-      <li>
-        <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋,<br>
-        <span class="title">"受聴エリア事前情報を用いた音場再現 ―直線状アレイによる検証―,"</span><br>
-        日本音響学会 2016年秋季研究発表会講演論文集, 3-7-17, pp. 415–418, Toyama, September 2016.  (in Japanese) <span class="award">[Student Presentation Award]</span>
-      </li>
-    </ol>
-
-    <h3>Technical Reports</h3>
-    <ol class="pub">
-      <li>
-        瀧田雄太， 小山翔一, <span class="author">植野夏樹</span>, 猿渡洋<br>
-        <span class="title">"凸最適化による信号分離を用いたグリッドレス音場分解の性能向上,"</span><br>
-        電子情報通信学会技術報告, vol. 117, no. 399, EA2017-87, pp. 19-24, Osaka, January 2018. (in Japanese)
-      </li>
-      <li>
-        <span class="author">植野夏樹</span>, 小山翔一, 猿渡洋,<br>
-        <span class="title">"受聴エリア事前情報を用いた音場再現 ～任意のスピーカ配置と指向特性における検証～,"</span><br>
-        電子情報通信学会技術報告, vol. 116, no. 420, EA2016-69, pp. 7-12, Kyoto, January 2017.  (in Japanese) <span class="award">[Student Presentation Award]</span>
-      </li>
-      <li>
-        <span class="author">植野夏樹</span>, 延原章平, 松山隆司,<br>
-        <span class="title">"平行柱面屈折層を備えたRay-Pixelカメラのキャリブレーション,"</span><br>
-        情報処理学会研究報告 (CVIM), 2016-CVIM-202, no. 11, pp. 1–8, Osaka, May 2016. (in Japanese) <span class="award">[Bachelor Thesis Session Award]</span>
-      </li>
-    </ol>
-
-    <hr>
-
-    <h2>Education</h2>
-
-    <dl>
-      <dt>Apr. 2018 - </dt>
-      <dd>
-        PhD student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
-      </dd>
-      <dt>Apr. 2016 - Mar. 2018</dt>
-      <dd>
-        Master's student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
-      </dd>
-      <dt>Apr. 2012 - Mar. 2016</dt>
-      <dd>
-        Bachelor's student, <a href="https://www.s-ee.t.kyoto-u.ac.jp/en" target="_blank">Department of Electrical and Electronic Engineering</a>, <a href="http://www.t.kyoto-u.ac.jp/en" target="_blank">Faculty of Engineering</a>, <a href="http://www.kyoto-u.ac.jp/en" target="_blank">Kyoto University</a>. <br>
-      </dd>
-    </dl>
-
+    <div class="container bg-light" style="padding-bottom: 15px;">
+      <hr>
+      <h2 class="text-center">History</h2>
+      <hr>
+      <div class="container">
+        <dl>
+          <dt>Apr. 2018 - </dt>
+          <dd>
+            PhD student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
+          </dd>
+          <dt>Apr. 2016 - Mar. 2018</dt>
+          <dd>
+            Master's student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
+          </dd>
+          <dt>Apr. 2012 - Mar. 2016</dt>
+          <dd>
+            Bachelor's student, <a href="https://www.s-ee.t.kyoto-u.ac.jp/en" target="_blank">Department of Electrical and Electronic Engineering</a>, <a href="http://www.t.kyoto-u.ac.jp/en" target="_blank">Faculty of Engineering</a>, <a href="http://www.kyoto-u.ac.jp/en" target="_blank">Kyoto University</a>. <br>
+          </dd>
+        </dl>
+      </div>
+    </div>
 
   </body>
 
