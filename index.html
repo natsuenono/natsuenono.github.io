@@ -2,40 +2,21 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Natsuki Ueno</title>
   
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/natsueno.css">
+
   <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <style media="screen">
-    .pub li {
-      margin-top: 20px;
-      line-height: 150%;
-    }
-    dt {
-      margin-top: 10px;
-    }
-    dd {
-      margin-bottom: 10px;
-    }
-    .author {
-      font-weight: 600;
-      text-decoration: underline;
-    }
-    .title {
-      font-weight: 600;
-    }
-    .award {
-      color: blue;
-    }
-    </style>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body class="bg-light">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="./index.html">
           Natsuki Ueno
@@ -58,8 +39,7 @@
     </nav>
   </header>
 
-  <!--　jumbotron　 -->
-  <div class="jumbotron bg-light">
+  <div class="jumbotron bg-default rounded-0">
     <div class="container">
       <h1>Natsuki Ueno / 植野 夏樹</h1>
       <p>
@@ -67,31 +47,52 @@
         PhD student in <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate school of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
         Email: natsuki_ueno [(at)] ipc.i.u-tokyo.ac.jp
       </p>
-      <p><font size="-1">
-        Last updated: Aug. 17, 2019
-      </font></p>
+      <footer class="small">
+        Last updated: Aug. 22, 2019
+      </footer>
     </div>
   </div>
 
-  <div class="container bg-light" style="padding-bottom: 15px;">
-    <hr>
-    <h2 class="text-center">Biography</h2>
-    <hr>
-    <div class="container">
-      <dl>
-        <dt>Apr. 2018 - </dt>
-        <dd>
-          PhD student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
-        </dd>
-        <dt>Apr. 2016 - Mar. 2018</dt>
-        <dd>
-          Master's student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
-        </dd>
-        <dt>Apr. 2012 - Mar. 2016</dt>
-        <dd>
-          Bachelor's student, <a href="https://www.s-ee.t.kyoto-u.ac.jp/en" target="_blank">Department of Electrical and Electronic Engineering</a>, <a href="http://www.t.kyoto-u.ac.jp/en" target="_blank">Faculty of Engineering</a>, <a href="http://www.kyoto-u.ac.jp/en" target="_blank">Kyoto University</a>. <br>
-        </dd>
-      </dl>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card p-4 mb-3">
+          <h2 class="text-center">Biography</h2>
+          <hr>
+          <div class="mb-3">
+            <b>Apr. 2018 - </b><br>
+            <div class="pl-4">
+            PhD student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
+            </div>
+          </div>
+          <div class="mb-3">
+            <b>Apr. 2016 - Mar. 2018</b><br>
+            <div class="pl-4">
+            Master's student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml" target="_blank">Department of Information Physics &amp; Computing</a>, <a href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of Tokyo</a>. <br>
+            </div>
+          </div>
+          <div class="mb-3">
+            <b>Apr. 2012 - Mar. 2016</b><br>
+            <div class="pl-4">
+            Bachelor's student, <a href="https://www.s-ee.t.kyoto-u.ac.jp/en" target="_blank">Department of Electrical and Electronic Engineering</a>, <a href="http://www.t.kyoto-u.ac.jp/en" target="_blank">Faculty of Engineering</a>, <a href="http://www.kyoto-u.ac.jp/en" target="_blank">Kyoto University</a>. <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card p-4 mb-3">
+          <h2 class="text-center">Research Interests</h2>
+          <hr>
+          <ul>
+            <li>Spatial audio</li>
+            <li>Acoustic signal processing</li>
+            <li>Inverse problem</li>
+            <li>Optimization</li>
+            <li>Functional analysis</li>
+            <li>Measure theory</li>
+          </ul>
+        </div>
+      </div>  
     </div>
   </div>
 </body>

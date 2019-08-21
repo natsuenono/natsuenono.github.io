@@ -1,0 +1,15 @@
+.pub li {
+  margin-top: 20px;
+  line-height: 150%;
+}
+.award {
+  color: blue;
+}
+body {
+  padding-top: 3.5rem;
+}
+.anchor {
+  display: block;
+  margin-top: -3.5rem;
+  padding-top: 3.5rem;
+}
