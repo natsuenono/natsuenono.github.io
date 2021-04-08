@@ -6,7 +6,6 @@
   color: blue;
 }
 body {
-  padding-top: 3.5rem;
   overflow-y: scroll;
 }
 .anchor {
@@ -16,4 +15,7 @@ body {
 }
 .navbar {
   padding: 0.5rem 1rem;
+}
+.stickyindex {
+  position: sticky;
 }
