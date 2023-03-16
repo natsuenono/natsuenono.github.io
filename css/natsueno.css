@@ -82,8 +82,9 @@ a:hover {
 }
 
 /* 要確認 */
-ul {
+ul, ol {
   padding-left: 1.5em;
+  padding-right: 0.5em;
   margin: 0;
 } 
 
