@@ -11,6 +11,7 @@
   --blue-dark: rgb(60, 120, 230);
   transition: .5s;
   font-size: 16px;
+  text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
