@@ -10,6 +10,7 @@
   --blue: rgb(80, 150, 240);
   --blue-dark: rgb(60, 120, 230);
   transition: .5s;
+  font-size: 16px
 }
 
 @media (prefers-color-scheme: light) {
@@ -39,6 +40,7 @@
 body {
   background-color: var(--bgcolor);
   color: var(--textcolor);
+  -webkit-text-size-adjust: 100%;
 }
 
 nav {
