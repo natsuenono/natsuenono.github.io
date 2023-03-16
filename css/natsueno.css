@@ -81,6 +81,12 @@ a:hover {
   border-bottom-width: thin;
 }
 
+/* 要確認 */
+ul {
+  padding-left: 1.5em;
+  margin: 0;
+} 
+
 .pub li {
   margin-top: 1em;
 }
