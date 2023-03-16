@@ -10,7 +10,8 @@
   --blue: rgb(80, 150, 240);
   --blue-dark: rgb(60, 120, 230);
   transition: .5s;
-  font-size: 16px
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,8 +39,8 @@
 }
 
 body {
-  -webkit-text-size-adjust: auto;
-  -ms-text-size-adjust: 100%;
+  /* -webkit-text-size-adjust: auto; */
+  /* -ms-text-size-adjust: 100%; */
   /* -moz-text-size-adjust: 100%; */
   /* text-size-adjust: 100%; */
   background-color: var(--bgcolor);
