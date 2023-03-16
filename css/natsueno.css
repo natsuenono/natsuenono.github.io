@@ -69,21 +69,28 @@ a:hover {
 
 .card {
   background-color: var(--cardbgcolor);
-  border-bottom-width: thin;
-  border-bottom-style: solid;
   border-color: var(--bordercolor);
+  border-bottom-style: solid;
+  border-bottom-width: thin;
 }
 
 .jumbotron {
   background-color: var(--jumbotron-bgcolor);
-  border-color: #ffffff27;
+  border-color: var(--bordercolor);
   border-bottom-style: solid;
-  border-width: thin;
+  border-bottom-width: thin;
+}
+
+.card-body {
+  padding: 1.0rem;
+}
+
+ul {
+  padding-left: 1.25em;
 }
 
 .pub li {
-  margin-top: 20px;
-  line-height: 150%;
+  margin-top: 1em;
 }
 .award {
   color: var(--blue);
