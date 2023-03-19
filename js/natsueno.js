@@ -1,5 +1,5 @@
-// header要素にheader.htmlを読み込む
 $(function () {
+  // header要素にheader.htmlを読み込む
   $('header').load('./common/header.html', function () {
     if (location.pathname == "/") {
       $(".nav-link").each(function () {
@@ -15,19 +15,25 @@ $(function () {
       });
     }
   });
-})
 
-$(function () {
-  $("#js-pagetop").click(function () {
+  $("#js-pagetop").on('click', function () {
     $('html, body').animate({
       scrollTop: 0
-    }, 0);
+    }, 100);
   });
-  $(window).scroll(function () {
+
+  var timer = null;
+  $(window).on('scroll', function () {
+    clearTimeout(timer)
+    timer = setTimeout(function(){BtnFade()}, 100);
+  });
+
+  function BtnFade () {
     if ($(window).scrollTop() > 1) {
       $('#js-pagetop').fadeIn(200).css('display', 'flex')
     } else {
       $('#js-pagetop').fadeOut(200)
     }
-  });
+  }
+
 });
