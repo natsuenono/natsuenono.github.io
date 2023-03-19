@@ -16,3 +16,18 @@ $(function () {
     }
   });
 })
+
+$(function () {
+  $("#js-pagetop").click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 0);
+  });
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 1) {
+      $('#js-pagetop').fadeIn(200).css('display', 'flex')
+    } else {
+      $('#js-pagetop').fadeOut(200)
+    }
+  });
+});

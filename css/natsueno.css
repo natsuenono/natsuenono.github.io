@@ -136,3 +136,21 @@ body {
 .stickyindex {
   position: sticky;
 }
+
+/* ページ上部に戻るボタンの表示 */
+.pagetop {
+  height: 2.5em;
+  width: 2.5em;
+  position: fixed;
+  right: 1.5em;
+  bottom: 1.5em;
+  background: rgba(255,255,255,0.6);
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 1.25em;
+}
