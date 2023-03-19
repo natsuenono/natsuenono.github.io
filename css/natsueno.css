@@ -78,8 +78,10 @@ nav {
   border-bottom-width: 1px;
   transition: width .2s;
 }
-.navbar .nav-item .nav-link:hover::before, .navbar .nav-item .nav-link:focus::before {
-  width: 100%;
+@media (hover: hover) and (pointer: fine) {
+  .navbar .nav-item .nav-link:hover::before, .navbar .nav-item .nav-link:focus::before {
+    width: 100%;
+  }
 }
 
 a {
