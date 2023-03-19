@@ -66,6 +66,7 @@ nav {
   display: inline-block;
   text-decoration: none;
 }
+
 .navbar .nav-item .nav-link::before {
   position: absolute;
   right: 0;
@@ -78,6 +79,7 @@ nav {
   border-bottom-width: 1px;
   transition: width .2s;
 }
+
 @media (hover: hover) and (pointer: fine) {
   .navbar .nav-item .nav-link:hover::before, .navbar .nav-item .nav-link:focus::before {
     width: 100%;
