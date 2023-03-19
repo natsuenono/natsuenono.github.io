@@ -1,28 +1,28 @@
 :root {
-  --dark: rgb(38,39,40);
+  /* --dark: rgb(38,39,40);
   --white: rgb(255,255,255);
   --white-light: rgb(250,250,250);
   --light: rgb(220,220,220);
   --gray: rgba(230,232,235);
   --gray-light: rgb(200,200,200);
-  --gray-dark: rgb(50,52,54);
+  --gray-dark: rgb(50,52,54); */
   --blue-light: rgb(110, 180, 250);
   --blue: rgb(80, 150, 240);
   --blue-dark: rgb(60, 120, 230);
-  transition: .5s;
   font-size: 16px;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  --bs-font-sans-serif: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bgcolor: var(--white-light);
-    --textcolor: var(--dark);
-    --jumbotron-bgcolor: var(--gray);
+    --bgcolor: var(--bs-light);
+    --textcolor: var(--bs-dark);
+    --jumbotron-bgcolor: var(--bs-gray-300);
     --bordercolor: rgba(0, 0, 0, 0.1);
-    --cardbgcolor: var(--white);
+    --cardbgcolor: var(--bs-white);
     --refcolor: var(--blue);
     --refhovercolor: var(--blue-dark);
   }
@@ -30,21 +30,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bgcolor: var(--dark);
-    --textcolor: var(--light);
-    --jumbotron-bgcolor: var(--dark);
+    --bgcolor: var(--bs-dark);
+    --textcolor: var(--bs-gray-200);
+    --jumbotron-bgcolor: var(--bs-dark);
     --bordercolor: rgba(255, 255, 255, 0.1);
-    --cardbgcolor: var(--gray-dark);
+    --cardbgcolor: var(--bs-gray-dark);
     --refcolor: var(--blue-light);
     --refhovercolor: var(--blue);
   }
 }
 
 body {
-  /* -webkit-text-size-adjust: auto; */
-  /* -ms-text-size-adjust: 100%; */
-  /* -moz-text-size-adjust: 100%; */
-  /* text-size-adjust: 100%; */
   background-color: var(--bgcolor);
   color: var(--textcolor);
 }
@@ -53,13 +49,42 @@ nav {
   border-bottom-width: thin;
   border-bottom-style: solid;
   border-color: var(--bordercolor);
-  background-color: var(--gray-dark);
+  background-color: var(--bs-gray-dark);
+}
+
+.navbar-brand {
+  /* font-weight: bold; */
+  text-decoration: none !important;
+}
+
+.navbar-toggler {
+  box-shadow: none !important;
+}
+
+.navbar .nav-item .nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.navbar .nav-item .nav-link::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  margin: 0 auto;
+  content: "";
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  transition: width .2s;
+}
+.navbar .nav-item .nav-link:hover::before, .navbar .nav-item .nav-link:focus::before {
+  width: 100%;
 }
 
 a {
   color: var(--refcolor);
   text-decoration: none;
-  background-color: transparent;
 }
 
 a:hover {
@@ -72,6 +97,7 @@ a:hover {
   border-color: var(--bordercolor);
   border-bottom-style: solid;
   border-bottom-width: thin;
+  margin-top: 1em;
 }
 
 .jumbotron {
@@ -79,6 +105,8 @@ a:hover {
   border-color: var(--bordercolor);
   border-bottom-style: solid;
   border-bottom-width: thin;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 /* 要確認 */
@@ -103,7 +131,7 @@ body {
   padding-top: 3.5rem;
 }
 .navbar {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
 .stickyindex {
   position: sticky;
