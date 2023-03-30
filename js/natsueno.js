@@ -19,20 +19,20 @@ $(function () {
   $("#js-pagetop").on('click', function () {
     $('html, body').animate({
       scrollTop: 0
-    }, 100, 'linear');
+    }, 50, 'linear');
   });
 
   var timer = null;
   $(window).on('scroll', function () {
     clearTimeout(timer)
-    timer = setTimeout(function(){BtnFade()}, 100);
+    timer = setTimeout(function(){BtnFade()}, 150);
   });
 
   function BtnFade () {
     if ($(window).scrollTop() > 1) {
-      $('#js-pagetop').fadeIn(200).css('display', 'flex')
+      $('#js-pagetop').fadeIn(100).css('display', 'flex')
     } else {
-      $('#js-pagetop').fadeOut(200)
+      $('#js-pagetop').fadeOut(100)
     }
   }
 

@@ -128,18 +128,7 @@ ul, ol {
 }
 body {
   overflow-y: scroll;
-}
-/* .anchor {
-  display: block;
-  margin-top: -3.5rem;
-  padding-top: 3.5rem;
-} */
-.navbar {
-  padding: 0.5rem 1rem;
-}
-.stickyindex {
-  position: sticky;
-}
+} 
 
 /* ページ上部に戻るボタンの表示 */
 .pagetop {
