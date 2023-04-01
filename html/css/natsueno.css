@@ -1,0 +1,39 @@
+:root {
+  font-size: 16px;
+  --bs-table-font-size: 10pt;
+  --bs-font-sans-serif: "Segoe UI";
+}
+
+.sheet {
+  padding: 1rem 3rem; 
+  columns: 4; 
+  column-gap: 3rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tabletitle {
+  padding-left: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color, inherit);
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: 0.15rem 0.15rem;
+}
+
+.command {
+  width: 40%;
+  font-size: var(--bs-table-font-size);
+  font-weight: 500;
+}
+
+.action {
+  font-size: var(--bs-table-font-size);
+  font-weight: 400;
+}
