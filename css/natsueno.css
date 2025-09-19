@@ -1,14 +1,8 @@
 :root{
-  /* --dark: rgb(38,39,40);
-  --white: rgb(255,255,255);
-  --white-light: rgb(250,250,250);
-  --light: rgb(220,220,220);
-  --gray: rgba(230,232,235);
-  --gray-light: rgb(200,200,200);
-  --gray-dark: rgb(50,52,54); */
-  --dark: rgb(34,38,40);
-  /* --gray-dark: rgb(60,63,68); */
-  --gray-dark: rgb(85,88,96);
+  --dark-rgb: 28,29,30;
+  --dark: rgb(28,29,30);
+  --gray-dark-rgb: 50,55,60;
+  --gray-dark: rgb(50,55,60);
   --gray: rgb(162,173,194);
   --gray-light: rgb(233,232,235);
   --light: rgb(253,253,255);
@@ -16,7 +10,6 @@
   --blue: rgb(80, 150, 240);
   --blue-dark: rgb(60, 120, 230);
 }
-
 
 :root {
   font-size: 16px;
@@ -26,28 +19,26 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bgcolor: var(--bs-light);
-    --textcolor: var(--bs-dark);
-    --jumbotron-bgcolor: var(--bs-gray-300);
-    --bordercolor: rgba(0, 0, 0, 0.1);
-    --cardbgcolor: var(--bs-white);
-    --refcolor: var(--blue);
-    --refhovercolor: var(--blue-dark);
-  }
+:root[data-theme="light"],
+:root:not([data-theme])[data-light-scheme] {
+  --bgcolor: var(--bs-light);
+  --textcolor: var(--bs-dark);
+  --jumbotron-bgcolor: var(--bs-gray-300);
+  --bordercolor: rgba(0, 0, 0, 0.1);
+  --cardbgcolor: var(--bs-white);
+  --refcolor: var(--blue);
+  --refhovercolor: var(--blue-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bgcolor: var(--bs-dark);
-    --textcolor: var(--bs-gray-200);
-    --jumbotron-bgcolor: var(--bs-dark);
-    --bordercolor: rgba(255, 255, 255, 0.1);
-    --cardbgcolor: var(--bs-gray-dark);
-    --refcolor: var(--blue-light);
-    --refhovercolor: var(--blue);
-  }
+:root[data-theme="dark"],
+:root:not([data-theme])[data-dark-scheme] {
+  --bgcolor: var(--dark);
+  --textcolor: var(--bs-gray-200);
+  --jumbotron-bgcolor: var(--dark);
+  --bordercolor: rgba(255, 255, 255, 0.1);
+  --cardbgcolor: rgba(var(--gray-dark-rgb), 0.4);;
+  --refcolor: var(--blue-light);
+  --refhovercolor: var(--blue);
 }
 
 body {
@@ -56,10 +47,10 @@ body {
 }
 
 nav {
-  border-bottom-width: thin;
-  border-bottom-style: solid;
-  border-color: var(--bordercolor);
-  background-color: var(--bs-gray-dark);
+  background-color: rgba(var(--dark-rgb), 0.9); /* 半透明 */
+  backdrop-filter: blur(5px); /* 背景ぼかし */
+  -webkit-backdrop-filter: blur(5px); /* Safari対応 */
+  border: none; /* 枠線を消したい場合 */
 }
 
 .navbar-brand {
@@ -107,11 +98,9 @@ a:hover {
 }
 
 .card {
-  background-color: var(--cardbgcolor);
-  border-color: var(--bordercolor);
-  border-bottom-style: solid;
-  border-bottom-width: thin;
   margin-top: 1em;
+  background-color: var(--cardbgcolor);
+  border: none;
 }
 
 .jumbotron {
@@ -157,4 +146,47 @@ body {
   z-index: 2;
   cursor: pointer;
   font-size: 1.25em;
+}
+
+/* ライト/ダークモード切替 */
+:root {
+  --switch-width: 36px;   /* スイッチ全体の幅 */
+  --switch-height: 16px;  /* スイッチ全体の高さ */
+  --knob-size: calc(var(--switch-height) - 4px); /* ノブは上下2pxの余白を考慮 */
+  --knob-offset: 2px;      /* 左右の余白 */
+}
+
+.theme-switch {
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch-container {
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background-color: var(--bs-light);
+  border-radius: calc(var(--switch-height) / 2);
+  position: relative;
+  margin: 0 8px;
+  transition: background-color 0.3s;
+}
+
+.switch-knob {
+  width: var(--knob-size);
+  height: var(--knob-size);
+  background-color: var(--bs-dark);
+  border-radius: 50%;
+  position: absolute;
+  top: var(--knob-offset);
+  left: var(--knob-offset);
+  transition: left 0.3s;
+}
+
+/* ダーク時に右端へ移動 */
+[data-theme="dark"] .switch-knob {
+  left: calc(var(--switch-width) - var(--knob-size) - var(--knob-offset));
+}
+
+#theme-toggle i {
+  color: var(--bs-light);  /* CSS変数で固定色にする */
 }
