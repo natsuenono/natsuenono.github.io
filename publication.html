@@ -2,6 +2,15 @@
 <html lang="ja">
 
 <head>
+  <script>
+    (function() {
+      let theme = localStorage.getItem("theme");
+      if (!theme) {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <title>Natsuki Ueno</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
@@ -17,7 +26,7 @@
 
 <body>
   <header class="sticky-top" ontouchstart=""></header><!-- ここにheader.htmlが読み込まれる -->
-  <button id="js-pagetop" class="pagetop"><i class="bi bi-chevron-double-up"></i></button>
+  <button id="js-pagetop" class="pagetop"><i class="bi bi-chevron-double-up"></i></button><!-- ここにページトップボタンが読み込まれる -->
 
   <div class="container">
     <div class="row">
@@ -32,97 +41,97 @@
                   <u>Natsuki Ueno</u> and Shoichi Koyama, 
                   "Sound field estimation: Theories and applications", 
                   Foundations and Trends&reg; in Signal Processing, vol.&thinsp;19, no.&thinsp;1, pp.&thinsp;1-98, February 2025. 
-                  <span class="d-inline-block">
-                    (<a href="https://www.nowpublishers.com/article/Details/SIG-121" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://www.nowpublishers.com/article/Details/SIG-121" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Shoichi Koyama, Juliano G. C. Ribeiro, Tomohiko Nakamura, <u>Natsuki Ueno</u>, and Micro Pezzoli, 
                   "Physics-informed machine learning for sound field estimation: Fundamentals, state of the art, and challenges," 
                   IEEE Signal Processing Magazine, vol.&thinsp;41, no.&thinsp;6, pp.&thinsp;60-71, November 2024. 
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10819673" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10819673" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Taiga Kawamura, <u>Natsuki Ueno</u>, and Nobutaka Ono, 
                   "Flexible and comprehensive framework of element selection based on nonconvex sparse optimization," 
                   IEEE Access, vol.&thinsp;12, pp.&thinsp;21337-21346, February 2024.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10419330" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10419330" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Shoichi Koyama, Keisuke Kimura, and <u>Natsuki Ueno</u>, 
                   "Weighted pressure and mode matching for sound field reproduction: Theoretical and experimental comparisons," 
                   Journal of the Audio Engineering Society, vol.&thinsp;71, no.&thinsp;4, pp.&thinsp;173-185, April 2023. 
-                  <span class="d-inline-block">
-                    (<a href="http://www.aes.org/e-lib/browse.cfm?elib=22039" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="http://www.aes.org/e-lib/browse.cfm?elib=22039" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Takumi Abe, Shoichi Koyama, <u>Natsuki Ueno</u>, and Hiroshi Saruwatari, 
                   "Amplitude matching for multizone sound field control," 
                   IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol.&thinsp;31, pp.&thinsp;659-669, 2023.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9998463" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9998463" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Juliano G. C. Ribeiro, <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
                   "Region-to-region kernel interpolation of acoustic transfer functions constrained by physical properties," 
                   IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol.&thinsp;30, pp.&thinsp;2944-2954, 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9866525" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9866525" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Tomoya Nishida, <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
                   "Region-restricted sensor placement based on Gaussian process for sound field estimation," 
                   IEEE Transactions on Signal Processing, vol.&thinsp;70, pp.&thinsp;1718-1733, 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9727096" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9727096" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Shoichi Koyama, Jesper Brunnström, Hayato Ito, <u>Natsuki Ueno</u>, and Hiroshi Saruwatari, 
                   "Spatial active noise control based on kernel interpolation of sound field," 
                   IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol.&thinsp;29, pp.&thinsp;3052-3063, 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9523774" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9523774" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
                   "Convex and differentiable formulation for inverse problems in Hilbert spaces with nonlinear clipping effects," 
                   IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, vol.&thinsp;E104-A, no.&thinsp;9, pp.&thinsp;1293-1303, September 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://www.jstage.jst.go.jp/article/transfun/advpub/0/advpub_2021EAP1004/_article" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://www.jstage.jst.go.jp/article/transfun/advpub/0/advpub_2021EAP1004/_article" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
                   "Directionally weighted sound field estimation exploiting prior information on source direction," 
                   IEEE Transactions on Signal Processing, vol.&thinsp;69, pp.&thinsp;2383-2395, 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9394763" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9394763" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   Yuta Takida, Shoichi Koyama, <u>Natsuki Ueno</u>, and Hiroshi Saruwatari, 
                   "Reciprocity gap functional in spherical harmonic domain for gridless sound field decomposition," 
                   Elsevier Signal Processing, vol.&thinsp;169, April 2020.
-                  <span class="d-inline-block">
-                    (<a href="https://www.sciencedirect.com/science/article/pii/S0165168419304359" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0165168419304359" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
                   "Three-dimensional sound field reproduction based on weighted mode-matching method," 
                   IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol.&thinsp;27, no.&thinsp;12, pp.&thinsp;1852-1867, December 2019.
-                  <span class="award">(IEEE SPS Japan Student Journal Paper Award)</span>
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8798873" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="award">IEEE SPS Japan Student Journal Paper Award</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8798873" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
               </ol>
@@ -139,11 +148,11 @@
                   <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
                   "Sound field recording using distributed microphones based on harmonic analysis of infinite order," 
                   IEEE Signal Processing Letters, vol.&thinsp;25, no.&thinsp;1, pp.&thinsp;135-139, January 2018.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8116652" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8116652" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
-                  <span class="d-inline-block">
-                    (<a href="https://codeocean.com/2017/11/17/sound-field-recording-based-on-harmonic-analysis-of-infinite-order/metadata" target="_blank"><i class="bi bi-code-slash"></i>&thinsp;code</a>)
+                  <span class="publication-link">
+                    <a href="https://codeocean.com/2017/11/17/sound-field-recording-based-on-harmonic-analysis-of-infinite-order/metadata" target="_blank"><i class="bi bi-code-slash"></i>&thinsp;Code</a>
                   </span>
                 </li>
               </ol>
@@ -175,8 +184,8 @@
                   <!-- 5&thinsp;pages,  -->
                   <!-- Hyderabad,  -->
                   April 2025.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10887761" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10887761" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -193,8 +202,8 @@
                   <!-- 5&thinsp;pages,  -->
                   <!-- Aalborg,  -->
                   September 2024.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10694115" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10694115" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -204,8 +213,8 @@
                   pp.&thinsp;2068-2072, 
                   <!-- Taipei,  -->
                   October 2023.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10317558" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10317558" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -215,8 +224,8 @@
                   <!-- 5&thinsp;pages,  -->
                   <!-- New Paltz,  -->
                   October, 2023. 
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10248111" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10248111" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -226,8 +235,8 @@
                   <!-- 5&thinsp;pages,  -->
                   <!-- Rhodes Island,  -->
                   June 2023.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/10095559" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10095559" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -237,8 +246,8 @@
                   pp.&thinsp;12-16, 
                   <!-- Chiang Mai,  -->
                   November 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9979874" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9979874" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -248,8 +257,8 @@
                   pp.&thinsp;718-723, 
                   <!-- Chiang Mai,  -->
                   November 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9980090" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9980090" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -259,8 +268,8 @@
                   pp.&thinsp;766-770, 
                   <!-- Chiang Mai,  -->
                   November 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9980079" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9980079" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -270,8 +279,8 @@
                   pp.&thinsp;31-35, 
                   <!-- Belgrade,  -->
                   August 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9909524" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9909524" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -281,8 +290,8 @@
                   pp.&thinsp;931-935, 
                   <!-- Singapore,  -->
                   May 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9747739" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9747739" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -292,8 +301,8 @@
                   pp.&thinsp;281-285, 
                   <!-- New Paltz,  -->
                   December 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9632799" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9632799" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -303,8 +312,8 @@
                   pp.&thinsp;261-265, 
                   <!-- New Paltz,  -->
                   December 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9632731" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9632731" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -314,10 +323,10 @@
                   pp.&thinsp;1-5, 
                   <!-- New Paltz,  -->
                   December 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9632672" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9632672" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
-                  <span class="d-inline-block">
+                  <span class="publication-link">
                     (<a href="https://sh01k.github.io/MeshRIR/" target="_blank"><i class="bi bi-code-slash"></i>&thinsp;code</a>)
                   </span>
                 </li>
@@ -328,9 +337,9 @@
                   <!-- 6&thinsp;pages,  -->
                   <!-- Bologna,  -->
                   September 2021.
-                  <span class="award">(Invited)</span>
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9610874" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="award">Invited</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9610874" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -340,8 +349,8 @@
                   pp.&thinsp;411-415, 
                   <!-- Toronto,  -->
                   June 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9414855" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9414855" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -351,8 +360,8 @@
                   pp.&thinsp;2289-2293, 
                   <!-- Amsterdam,  -->
                   January 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9287222" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9287222" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -362,8 +371,8 @@
                   <!-- 5&thinsp;pages,  -->
                   <!-- Hangzhou,  -->
                   June 2020.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9104256" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9104256" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -373,8 +382,8 @@
                   pp.&thinsp;166-170, 
                   <!-- Barcelona,  -->
                   May 2020.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9053715" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9053715" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -384,9 +393,9 @@
                   pp.&thinsp;8399-8403, 
                   <!-- Barcelona,  -->
                   May 2020.
-                  <span class="award">(Invited)</span>
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/9053416" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="award">Invited</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/9053416" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -396,8 +405,8 @@
                   pp.&thinsp;363-367, 
                   <!-- New Paltz,  -->
                   October 2019.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8937208" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8937208" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -407,8 +416,8 @@
                   pp.&thinsp;1101-1108, 
                   <!-- Aachen,  -->
                   September 2019.
-                  <span class="d-inline-block">
-                    (<a href="http://pub.dega-akustik.de/ICA2019/data/articles/000974.pdf" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="http://pub.dega-akustik.de/ICA2019/data/articles/000974.pdf" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -418,7 +427,7 @@
                   pp.&thinsp;4117-4124, 
                   <!-- Montreal,  -->
                   July 2019.
-                  <span class="award">(Invited)</span>
+                  <span class="award">Invited</span>
                 </li>
                 <li>
                   Hayato Ito, Shoichi Koyama, <u>Natsuki Ueno</u>, and Hiroshi Saruwatari, 
@@ -427,9 +436,9 @@
                   pp.&thinsp;511-515, 
                   <!-- Brighton,  -->
                   May 2019.
-                  <span class="award">(Best Student Paper Award)</span>
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8683067" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="award">Best Student Paper Award</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8683067" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -439,8 +448,8 @@
                   pp.&thinsp;581-585, 
                   <!-- Brighton,  -->
                   May 2019.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8683310" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8683310" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -450,8 +459,8 @@
                   pp.&thinsp;436-440, 
                   <!-- Tokyo,  -->
                   September 2018.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8521334" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8521334" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -461,10 +470,10 @@
                   pp.&thinsp;627-631, 
                   <!-- Sheffield,  -->
                   July 2018.
-                  <span class="award">(Best Student Paper Award)</span> 
-                  <span class="award">(ONRG sponsored student travel grants)</span>
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8448736" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="award">Best Student Paper Award</span> 
+                  <span class="award">ONRG sponsored student travel grants</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8448736" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -474,9 +483,9 @@
                   pp.&thinsp;466-470, 
                   <!-- Calgary,  -->
                   April 2018.
-                  <span class="award">(IEEE SPS Japan Student Conference Paper Award)</span>
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/8462084" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="award">IEEE SPS Japan Student Conference Paper Award</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8462084" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -486,8 +495,8 @@
                   pp.&thinsp;111-115, 
                   <!-- New Orleans,  -->
                   March 2017.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/7952128" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/7952128" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
@@ -497,8 +506,8 @@
                   pp.&thinsp;196-200, 
                   <!-- San Francisco,  -->
                   March 2017.
-                  <span class="d-inline-block">
-                    (<a href="https://ieeexplore.ieee.org/document/7895589" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/7895589" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
               </ol>
@@ -615,7 +624,7 @@
                   電子情報通信学会技術報告, vol.&thinsp;123, no.&thinsp;279, 
                   pp.&thinsp;51-56, 
                   November 2023 (in Japanese). 
-                  <span class="award">(学生研究奨励賞)</span>
+                  <span class="award">学生研究奨励賞</span>
                 </li>
                 <li>
                   髙橋 知宏, ⽊下 裕磨, <u>植野 夏樹</u>, 若林 佑幸, ⼩野 順貴, 本多 潤, 福⾺ 誠⼠, 北森 葵, 中川 浩, 
@@ -737,7 +746,7 @@
                   pp.&thinsp;147-152, 
                   <!-- Okinawa,  -->
                   March 2020 (in Japanese).
-                  <span class="award">(信号処理研究会賞)</span>
+                  <span class="award">信号処理研究会賞</span>
                 </li>
                 <li>
                   Juliano G. C. Ribeiro, <u>Natsuki Ueno</u>, Shoichi Koyama, and Hiroshi Saruwatari, 
@@ -754,7 +763,7 @@
                   pp.&thinsp;183-186, 
                   <!-- Shiga,  -->
                   September 2019 (in Japanese).
-                  <span class="award">(学生優秀発表賞)</span>
+                  <span class="award">学生優秀発表賞</span>
                 </li>
                 <li>
                   伊東 勇登, 小山 翔一, <u>植野 夏樹</u>, 猿渡 洋, 
@@ -819,7 +828,7 @@
                   pp.&thinsp;447-450, 
                   <!-- Ehime,  -->
                   September 2017 (in Japanese).
-                  <span class="award">(学生優秀発表賞)</span>
+                  <span class="award">学生優秀発表賞</span>
                 </li>
                 <li>
                   <u>植野 夏樹</u>, 亀岡 弘和, 
@@ -836,7 +845,7 @@
                   pp.&thinsp;7-12, 
                   <!-- Kyoto,  -->
                   January 2017 (in Japanese).
-                  <span class="award">(学生研究奨励賞)</span>
+                  <span class="award">学生研究奨励賞</span>
                 </li>
                 <li>
                   <u>植野 夏樹</u>, 小山 翔一, 猿渡 洋, 
@@ -845,7 +854,7 @@
                   pp.&thinsp;415-418, 
                   <!-- Toyama,  -->
                   September 2016 (in Japanese).
-                  <span class="award">(学生優秀発表賞)</span>
+                  <span class="award">学生優秀発表賞</span>
                 </li>
                 <li>
                   <u>植野 夏樹</u>, 延原 章平, 松山 隆司, 
@@ -854,7 +863,7 @@
                   pp.&thinsp;1-8, 
                   <!-- Osaka,  -->
                   May 2016 (in Japanese).
-                  <span class="award">(卒論セッション 優秀賞)</span>
+                  <span class="award">卒論セッション 優秀賞</span>
                 </li>
               </ol>
             </div>
@@ -870,16 +879,16 @@
                   Shoichi Koyama and <u>Natsuki Ueno</u>,  
                   "Sound field estimation: Recent advances and applications," 
                   Tutorial in IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Singapore, May 2022.
-                  <span class="d-inline-block">
-                    (<a href="https://www.sp.ipc.i.u-tokyo.ac.jp/~koyama/slides/2022/Koyama-Ueno_ICASSP2022_tutorial.pdf" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://www.sp.ipc.i.u-tokyo.ac.jp/~koyama/slides/2022/Koyama-Ueno_ICASSP2022_tutorial.pdf" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
                 <li>
                   <u>Natsuki Ueno</u> and Shoichi Koyama, 
                   "Infinite-dimensional expansion for sound field estimation with application to spatial audio," 
                   IEEE Signal Processing Society Webinar, December 2021.
-                  <span class="d-inline-block">
-                    (<a href="https://signalprocessingsociety.org/newsletter/2021/12/sps-webinar-20-december-2021-infinite-dimensional-expansion-sound-field" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;link</a>)
+                  <span class="publication-link">
+                    <a href="https://signalprocessingsociety.org/newsletter/2021/12/sps-webinar-20-december-2021-infinite-dimensional-expansion-sound-field" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
                   </span>
                 </li>
               </ol>

@@ -1,4 +1,8 @@
-:root{
+/* =======================
+   カラーバリエーション
+======================= */
+:root {
+  /* 基本カラー */
   --dark-rgb: 28,29,30;
   --dark: rgb(28,29,30);
   --gray-dark-rgb: 50,55,60;
@@ -6,55 +10,81 @@
   --gray: rgb(162,173,194);
   --gray-light: rgb(233,232,235);
   --light: rgb(253,253,255);
-  --blue-light: rgb(110, 180, 250);
-  --blue: rgb(80, 150, 240);
-  --blue-dark: rgb(60, 120, 230);
-}
+  --blue-light: rgb(110,180,250);
+  --blue: rgb(70,130,240);
+  --blue-dark: rgb(60,120,230);
+  
+  /* --blue: rgb(30, 120, 30); */
 
-:root {
+  /* フォント関連 */
   font-size: 16px;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  --bs-font-sans-serif: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: -apple-system, "BlinkMacSystemFont", "Helvetica Neue", Helvetica, "Arial",
+    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* テーマ切替用スイッチ */
+  --switch-width: 32px;
+  --switch-height: 14px;
+  --knob-size: calc(var(--switch-height) - 4px);
+  --knob-offset: 2px;
 }
 
+/* =======================
+   ライトテーマ
+======================= */
 :root[data-theme="light"],
 :root:not([data-theme])[data-light-scheme] {
   --bgcolor: var(--bs-light);
   --textcolor: var(--bs-dark);
   --jumbotron-bgcolor: var(--bs-gray-300);
-  --bordercolor: rgba(0, 0, 0, 0.1);
+  --bordercolor: rgba(0,0,0,0.1);
   --cardbgcolor: var(--bs-white);
   --refcolor: var(--blue);
   --refhovercolor: var(--blue-dark);
 }
 
+/* =======================
+   ダークテーマ
+======================= */
 :root[data-theme="dark"],
 :root:not([data-theme])[data-dark-scheme] {
   --bgcolor: var(--dark);
   --textcolor: var(--bs-gray-200);
   --jumbotron-bgcolor: var(--dark);
-  --bordercolor: rgba(255, 255, 255, 0.1);
-  --cardbgcolor: rgba(var(--gray-dark-rgb), 0.4);;
+  --bordercolor: rgba(255,255,255,0.1);
+  --cardbgcolor: rgba(var(--gray-dark-rgb),0.3);
   --refcolor: var(--blue-light);
   --refhovercolor: var(--blue);
 }
 
+/* =======================
+   ページ全体
+======================= */
 body {
   background-color: var(--bgcolor);
   color: var(--textcolor);
+  overflow-y: scroll;
+}
+
+/* =======================
+   header / navbar
+======================= */
+header {
+  /* DevToolsで値を確認 */
+  min-height: 56px;
 }
 
 nav {
-  background-color: rgba(var(--dark-rgb), 0.9); /* 半透明 */
-  backdrop-filter: blur(5px); /* 背景ぼかし */
-  -webkit-backdrop-filter: blur(5px); /* Safari対応 */
-  border: none; /* 枠線を消したい場合 */
+  background-color: rgba(var(--dark-rgb), 0.9);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: none;
 }
 
 .navbar-brand {
-  /* font-weight: bold; */
   text-decoration: none !important;
 }
 
@@ -66,6 +96,7 @@ nav {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  color: var(--bs-light) !important;
 }
 
 .navbar .nav-item .nav-link::before {
@@ -82,11 +113,20 @@ nav {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .navbar .nav-item .nav-link:hover::before, .navbar .nav-item .nav-link:focus::before {
+  .navbar .nav-item .nav-link:hover::before,
+  .navbar .nav-item .nav-link:focus::before {
     width: 100%;
   }
 }
 
+.navbar .nav-link.active {
+  /* font-weight: bold; */
+  text-shadow: 0px 0px 0.075rem currentColor;
+}
+
+/* =======================
+   リンク全般
+======================= */
 a {
   color: var(--refcolor);
   text-decoration: none;
@@ -97,6 +137,9 @@ a:hover {
   text-decoration: underline;
 }
 
+/* =======================
+   カード・jumbotron
+======================= */
 .card {
   margin-top: 1em;
   background-color: var(--cardbgcolor);
@@ -112,25 +155,40 @@ a:hover {
   padding-bottom: 2em;
 }
 
-/* 要確認 */
+/* =======================
+   リスト
+======================= */
 ul, ol {
   padding-left: 1.5em;
   padding-right: 0.5em;
   margin: 0;
   font-size: 0.97em;
-} 
+}
 
 .pub li {
   margin-top: 1em;
 }
-.award {
-  color: var(--blue);
-}
-body {
-  overflow-y: scroll;
-} 
 
-/* ページ上部に戻るボタンの表示 */
+.award {
+  display: inline-block;
+  background-color: rgba(70,130,240,0.3); 
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.05em 0.4em;
+  border-radius: 0.2em;
+  margin-left: 0.25em;
+}
+
+.publication-link a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+}
+
+/* =======================
+   ページトップボタン
+======================= */
 .pagetop {
   height: 2.5em;
   width: 2.5em;
@@ -148,14 +206,9 @@ body {
   font-size: 1.25em;
 }
 
-/* ライト/ダークモード切替 */
-:root {
-  --switch-width: 36px;   /* スイッチ全体の幅 */
-  --switch-height: 16px;  /* スイッチ全体の高さ */
-  --knob-size: calc(var(--switch-height) - 4px); /* ノブは上下2pxの余白を考慮 */
-  --knob-offset: 2px;      /* 左右の余白 */
-}
-
+/* =======================
+   ライト/ダークモード切替スイッチ
+======================= */
 .theme-switch {
   cursor: pointer;
   user-select: none;
@@ -182,11 +235,10 @@ body {
   transition: left 0.3s;
 }
 
-/* ダーク時に右端へ移動 */
 [data-theme="dark"] .switch-knob {
   left: calc(var(--switch-width) - var(--knob-size) - var(--knob-offset));
 }
 
 #theme-toggle i {
-  color: var(--bs-light);  /* CSS変数で固定色にする */
+  color: var(--bs-light);
 }
