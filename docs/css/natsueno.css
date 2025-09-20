@@ -196,7 +196,8 @@ ul, ol {
   position: fixed;
   right: 1.5em;
   bottom: 1.5em;
-  background: rgba(255,255,255,0.6);
+  background: color-mix(in srgb, var(--textcolor) 10%, transparent);
+  color: color-mix(in srgb, var(--textcolor) 90%, transparent);
   border: none;
   border-radius: 50%;
   display: none;
