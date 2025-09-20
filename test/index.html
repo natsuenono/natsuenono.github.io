@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script>
+    (function() {
+      let theme = localStorage.getItem("theme");
+      if (!theme) {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <title>Natsuki Ueno</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/natsueno.css">
+  <link rel="stylesheet" href="icons-1.13.1/font/bootstrap-icons.css">
+
+  <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/natsueno.js"></script>
+</head>
+
+<body>
+  <header class="sticky-top" ontouchstart=""><!-- ここにheader.htmlが読み込まれる -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="./">
+          Natsuki Ueno
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./publication.html">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sites.google.com/cs.kumamoto-u.ac.jp/uenolab" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Lab</a>
+            </li>
+          </ul>
+          
+          <div id="theme-toggle" class="theme-switch d-flex align-items-center">
+            <i class="bi bi-sun-fill me-1"></i>
+            <div class="switch-container">
+              <div class="switch-knob"></div>
+            </div>
+            <i class="bi bi-moon-fill ms-1"></i>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <button id="js-pagetop" class="pagetop"><i class="bi bi-chevron-double-up"></i></button><!-- ここにページトップボタンが読み込まれる -->
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Natsuki Ueno</h1>
+      <p>
+        Associate Professor, <a
+        href="https://www.fast.kumamoto-u.ac.jp/en/home/" target="_blank">Faculty of Advanced Science and Technology</a>, <a
+        href="https://ewww.kumamoto-u.ac.jp/en/" target="_blank">Kumamoto University</a>. <br>
+        Email: natsuki.ueno [(at)] ieee.org<br>
+      </p>
+      <footer class="small">
+        Last updated: 2025/09/19
+      </footer>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card px-2 py-2">
+          <div class="card-body">
+            <h2 class="card-title text-center">Biography</h2>
+            <hr>
+            <div class="mb-3">
+              <b>Apr. 2024 - </b><br>
+              <div class="pl-4">
+                Associate Professor, <a
+                href="https://www.fast.kumamoto-u.ac.jp/en/home/" target="_blank">Faculty of Advanced Science and Technology</a>, <a
+                href="https://ewww.kumamoto-u.ac.jp/en/" target="_blank">Kumamoto University</a>.
+                <br>
+              </div>
+            </div>
+            <div class="mb-3">
+              <b>Jun. 2024 - Mar. 2025</b><br>
+              <div class="pl-4">
+                Project Associate Professor, <a href="https://www.tmu.ac.jp/english/academics/faculty/sd/cs.html"
+                target="_blank">Department of Computer Science</a>, <a
+                href="https://www.sd.tmu.ac.jp/english/index.html" target="_blank">Faculty of Systems Design</a>, <a
+                href="https://www.tmu.ac.jp/english/index.html" target="_blank">Tokyo Metropolitan University</a>.
+                <br>
+              </div>
+            </div>
+            <div class="mb-3">
+              <b>May 2021 - Mar. 2024</b><br>
+              <div class="pl-4">
+                Project Assistant Professor, <a href="https://www.tmu.ac.jp/english/academics/faculty/sd/cs.html"
+                target="_blank">Department of Computer Science</a>, <a
+                href="https://www.sd.tmu.ac.jp/english/index.html" target="_blank">Faculty of Systems Design</a>, <a
+                href="https://www.tmu.ac.jp/english/index.html" target="_blank">Tokyo Metropolitan University</a>.
+                <br>
+              </div>
+            </div>
+            <div class="mb-3">
+              <b>May 2021 - Mar. 2024</b><br>
+              <div class="pl-4">
+                Adjunct researcher, <a href="https://www.rd.ntt/e/cs/team_project/media/"
+                target="_blank">Media Information Laboratory</a>, <a href="https://www.rd.ntt/e/cs/"
+                target="_blank">NTT Communication Science Laboratories</a>, <a href="https://group.ntt/en/"
+                target="_blank">Nippon Telegraph and Telephone Corporation</a>.
+                <br>
+              </div>
+            </div>
+            <div class="mb-3">
+              <b>Apr. 2018 - Mar. 2021</b><br>
+              <div class="pl-4">
+                Ph.D. student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml"
+                  target="_blank">Department of Information Physics &amp; Computing</a>, <a
+                  href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science
+                  and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of
+                  Tokyo</a>. <br>
+              </div>
+            </div>
+            <div class="mb-3">
+              <b>Apr. 2016 - Mar. 2018</b><br>
+              <div class="pl-4">
+                Master's student, <a href="http://www.i.u-tokyo.ac.jp/edu/course/ipc/index_e.shtml"
+                  target="_blank">Department of Information Physics &amp; Computing</a>, <a
+                  href="http://www.i.u-tokyo.ac.jp/index_e.shtml" target="_blank">Graduate School of Information Science
+                  and Technology</a>, <a href="http://www.u-tokyo.ac.jp/en/index.html" target="_blank">The University of
+                  Tokyo</a>. <br>
+              </div>
+            </div>
+            <div class="mb-3">
+              <b>Apr. 2012 - Mar. 2016</b><br>
+              <div class="pl-4">
+                Bachelor's student, <a href="https://www.s-ee.t.kyoto-u.ac.jp/en" target="_blank">Department of
+                  Electrical and Electronic Engineering</a>, <a href="http://www.t.kyoto-u.ac.jp/en"
+                  target="_blank">Faculty of Engineering</a>, <a href="http://www.kyoto-u.ac.jp/en"
+                  target="_blank">Kyoto University</a>. <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

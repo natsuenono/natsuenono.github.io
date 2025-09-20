@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <script>
+    (function() {
+      let theme = localStorage.getItem("theme");
+      if (!theme) {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <title>Test</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/natsueno.css">
+  <link rel="stylesheet" href="icons-1.13.1/font/bootstrap-icons.css">
+
+  <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/natsueno.js"></script>
+</head>
+
+<body>
+  <header class="sticky-top" ontouchstart="">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="./">
+          Nest
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./publication.html">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sites.google.com/cs.kumamoto-u.ac.jp/uenolab" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Lab</a>
+            </li>
+          </ul>
+          
+          <div id="theme-toggle" class="theme-switch d-flex align-items-center">
+            <i class="bi bi-sun-fill me-1"></i>
+            <div class="switch-container">
+              <div class="switch-knob"></div>
+            </div>
+            <i class="bi bi-moon-fill ms-1"></i>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+  </header><!-- ここにheader.htmlが読み込まれる -->
+  <button id="js-pagetop" class="pagetop"><i class="bi bi-chevron-double-up"></i></button><!-- ここにページトップボタンが読み込まれる -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="anchor" id="journalpapers">
+          <div class="card px-2 py-2">
+            <div class="card-body">
+              <h2 class="card-title text-center">Journal Papers</h2>
+              <hr>
+              <ol class="pub">
+                <li>
+                  <u>Author 1</u> and Author 2, 
+                  "Article title", 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY. 
+                  <span class="publication-link">
+                    <a href="https://www.nowpublishers.com/article/Details/SIG-121" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                </li>
+                <li>
+                  <u>Author 1</u> and Author 2, 
+                  "Article title", 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY. 
+                  <span class="publication-link">
+                    <a href="https://www.nowpublishers.com/article/Details/SIG-121" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                </li>
+                <li>
+                  <u>Author 1</u>, Author 2, and Author 3, 
+                  "Long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long article title," 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY.
+                  <span class="award">Paper Award</span>
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8798873" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="anchor" id="letters">
+          <div class="card px-2 py-2">
+            <div class="card-body">
+              <h2 class="text-center">Letters</h2>
+              <hr>
+              <ol class="pub">
+                <li>
+                  <u>Author 1</u> and Author 2, 
+                  "Article title", 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY. 
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/8116652" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                  <span class="publication-link">
+                    <a href="https://codeocean.com/2017/11/17/sound-field-recording-based-on-harmonic-analysis-of-infinite-order/metadata" target="_blank"><i class="bi bi-code-slash"></i>&thinsp;Code</a>
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="anchor" id="internationalconferences">
+          <div class="card px-2 py-2">
+            <div class="card-body">
+              <h2 class="text-center">International Conferences</h2>
+              <hr>
+              <ol class="pub">
+                <li>
+                  <u>Author 1</u> and Author 2, 
+                  "Article title", 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY. 
+                </li>
+                <li>
+                  <u>Author 1</u>, Author 2, and Author 3, 
+                  "Long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long-long article title," 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY.
+                </li>
+                <li>
+                  <u>Author 1</u>, Author 2, and Author 3, 
+                  "Long-long-long-long-long-long-long-long-long-long-long-long article title," 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY.
+                </li>
+                <li>
+                  <u>Author 1</u>, Author 2, and Author 3, 
+                  "Long-long-long-long-long-long-long-long-long-long-long-long article title," 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY.
+                </li>
+                <li>
+                  <u>Author 1</u>, Author 2, and Author 3, 
+                  "Long-long-long-long-long-long-long-long-long-long-long-long article title," 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY.
+                </li>
+                <li>
+                  <u>Author 1</u> and Author 2, 
+                  "Article title", 
+                  Book Title, vol.&thinsp;XX, no.&thinsp;XX, pp.&thinsp;XX-XX, Month YYYY. 
+                  <span class="publication-link">
+                    <a href="https://ieeexplore.ieee.org/document/10887761" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="anchor" id="domesticconferences">
+          <div class="card px-2 py-2">
+            <div class="card-body">
+              <h2 class="text-center">Domestic Conferences</h2>
+              <hr>
+              <ol class="pub">
+                <li>
+                  著者1, <u>著者2</u>, 
+                  "論文題目," 
+                  研究発表会講演論文集, 
+                  pp.&thinsp;XX-XX, 
+                  Month YYYY (in Japanese).
+                  <span class="award">研究奨励賞</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="anchor" id="seminars">
+          <div class="card px-2 py-2">
+            <div class="card-body">
+              <h2 class="text-center">Seminars</h2>
+              <hr>
+              <ol class="pub">
+                <li>
+                  Author 1 and <u>Author 2</u>,  
+                  "Presentation title," 
+                  International Conference, Month YYYY.
+                  <span class="publication-link">
+                    <a href="https://www.sp.ipc.i.u-tokyo.ac.jp/~koyama/slides/2022/Koyama-Ueno_ICASSP2022_tutorial.pdf" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                </li>
+                <li>
+                  <u>Author 1</u> and Author 2,  
+                  "Presentation title," 
+                  International Conference, Month YYYY.
+                  <span class="publication-link">
+                    <a href="https://www.sp.ipc.i.u-tokyo.ac.jp/~koyama/slides/2022/Koyama-Ueno_ICASSP2022_tutorial.pdf" target="_blank"><i class="bi bi-box-arrow-up-right"></i>&thinsp;Link</a>
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      <div class="mb-4"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
