@@ -67,4 +67,33 @@ $(function () {
       }
     });
   }
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navbar = document.querySelector("header.sticky-top"); // ナビバーを取得
+  if (!navbar) return;
+
+  // 対象IDのリスト
+  const anchors = ["journalpapers", "books", "internationalconferences", "domesticconferences", "seminars"];
+
+  function applyOffset() {
+    const navbarHeight = navbar.offsetHeight;
+    // CSS変数として設定（必要に応じてCSSでも参照可能）
+    document.documentElement.style.setProperty('--navbar-height', navbarHeight + 'px');
+
+    // 各ターゲット要素に scroll-margin-top を設定
+    anchors.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.scrollMarginTop = navbarHeight + "px";
+      }
+    });
+  }
+
+  // 初期実行
+  applyOffset();
+
+  // ウィンドウリサイズ時も再計算
+  window.addEventListener("resize", applyOffset);
 });
