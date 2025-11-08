@@ -23,6 +23,9 @@
     "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  text-align: justify;
+  text-justify: inter-word;
+  text-autospace: normal;
 
   /* テーマ切替用スイッチ */
   --switch-width: 28px;
